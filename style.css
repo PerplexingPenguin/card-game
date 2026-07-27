@@ -1,6 +1,25 @@
 .card {
-  background: orange;
-  width: 5em;
-  height: 2em;
+  position: relative;
+  background: rgb(87, 151, 247);
+  width: 11.25em;
+  height: 16em;
   margin-top: 10px;
+  border-radius: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 11.25em);
+  gap: 10px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  background-size: 100px 100px;
+  background-image: url('sylveonFocus-ezgif.com-crop.gif');
+  width: 100px;
+  height: 100px;
 }
