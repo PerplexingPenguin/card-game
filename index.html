@@ -5,17 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <h1>Pokémon Matching Cards</h1>
   <form action="javascript:void(0)">
-    <input type="number" placeholder="enter # of cards" id="card-input">
-    <button type="submit">submit</button>
+    <input type="number" placeholder="enter # of cards" id="card-input" step="2" min="2" max="20">
+    <button type="submit" id="card-submit">submit</button>
   </form>
-  <div class="cards">
-    <div class="card">eeee</div>
+  <div id="cards">
+    <div class="card"></div>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
