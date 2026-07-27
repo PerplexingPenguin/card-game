@@ -1,6 +1,7 @@
 const cardInput = document.getElementById("card-input");
 const cardsDiv = document.getElementById("cards");
 const cardSubmit = document.getElementById("card-submit");
+const randomItems = [Bulbasaur, Ivysaur, Venusaur, Charmander, Charmeleon, Charizard, Squirtle, Wartortle, Blastoise, Caterpie, Metapod, Butterfree, Weedle, Kakuna, Beedrill, Pidgey, Pidgeotto, Pidgeo, Rattata, Raticate, Spearow, Fearow, Ekans, Arbok, Pikachu, Raichu, Sandshrew, Sandslash]
 
 function createCards() {
   cardsDiv.innerHTML = ''
@@ -21,6 +22,8 @@ function createCards() {
     cardsDiv.appendChild(card);
   };
 };
+
+
 
 function fetchPokemonSprite(pokemon) {
   let url = pokemon.url
