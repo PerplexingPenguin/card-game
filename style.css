@@ -30,7 +30,7 @@
 }
 
 .flipped {
-  transform: rotateX(180);
+  transform: rotateY(180deg);
 }
 
 .front {
@@ -39,6 +39,7 @@
 
 .back {
   background-color: red;
+  transform: rotateY(180deg);
 }
 
 .cards {
