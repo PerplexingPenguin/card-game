@@ -10,10 +10,15 @@ function createCards() {
     card.classList.add("card");
 
     card.addEventListener("click", () => {
-      card.classList.add("flipped");
+      s
+      if (card.classList.contains('flipped')) {
+        card.classList.remove("flipped");
+      } else {
+        card.classList.add("flipped");
+      };
     });
 
-    card.innerHTML = "<div class='front'><img src='sylveonFocus-ezgif.com-crop.gif' width='100'/></div> <div class='back'></div>"
+    card.innerHTML = "<div class='front'><img src='sylveonFocus-ezgif.com-crop.gif' width='100'/></div> <div class='back'><p></p></div>"
     cardsDiv.appendChild(card);
   };
 };
