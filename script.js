@@ -9,7 +9,7 @@ function createCards() {
   for (let i = 0; i < numberOfCards; i++) {
     const card = document.createElement("DIV");
     card.classList.add("card");
-    card.innerHTML = "<div class='front'></div> <div class='back'></div>"
+    card.innerHTML = "<div class='front'><p></p></div> <div class='back'><img src='sylveonFocus-ezgif.com-crop.gif' width='100'/></div>"
     cardsDiv.appendChild(card);
   };
 };
