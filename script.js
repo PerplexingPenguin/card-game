@@ -10,7 +10,6 @@ function createCards() {
     card.classList.add("card");
 
     card.addEventListener("click", () => {
-      s
       if (card.classList.contains('flipped')) {
         card.classList.remove("flipped");
       } else {
@@ -22,6 +21,23 @@ function createCards() {
     cardsDiv.appendChild(card);
   };
 };
+
+function fetchPokemonSprite(pokemon) {
+  let url = pokemon.url
+  fetch(url).then(response => response.json()).then(data => {
+    console.log(data.sprites.front_default);
+  })
+};
+
+function fetchPokemon() {
+  fetch('https://pokeapi.co/api/v2/pokemon?limit=151').then(response => response.json()).then(function (allpokemon) {
+    allpokemon.results.forEach(function (pokemon) {
+      fetchPokemonSprite(pokemon);
+    })
+  })
+};
+
+fetchPokemon();
 
 cardSubmit.addEventListener("click", createCards);
 
