@@ -9,6 +9,7 @@ function createCards() {
   for (let i = 0; i < numberOfCards; i++) {
     const card = document.createElement("DIV");
     card.classList.add("card");
+    card.innerHTML = "<div class='front'></div> <div class='back'></div>"
     cardsDiv.appendChild(card);
   };
 };
