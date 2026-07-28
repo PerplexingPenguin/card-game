@@ -7,7 +7,7 @@ A matching-card game using the first 29 Pokémon from the Pokédex.
 
 Features:
 - ability to set any amount of cards (<=20)
-- art from the Pokémon website
+- counters telling how many games you've won and the pairs matched
 - fun card backing with original art!
 
 credits: art is from the Pokémon.com website
