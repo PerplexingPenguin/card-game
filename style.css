@@ -18,6 +18,8 @@
   position: relative;
   transform-style: preserve-3d;
   border-radius: 20px;
+  transition: 0.25s ease;
+
 }
 
 .front,
@@ -46,7 +48,7 @@
 }
 
 .flipped {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) perspective(400px);
 }
 
 .front {
