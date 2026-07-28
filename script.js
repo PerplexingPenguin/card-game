@@ -2,10 +2,13 @@ const cardInput = document.getElementById("card-input");
 const cardsDiv = document.getElementById("cards");
 const cardSubmit = document.getElementById("card-submit");
 const randomItems = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wartortle", "Blastoise", "Caterpie", "Metapod", "Butterfree", "Weedle", "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot", "Rattata", "Raticate", "Spearow", "Fearow", "Ekans", "Arbok", "Pikachu", "Raichu", "Sandshrew", "Sandslash"];
+const gameCounter = document.getElementById("games-won");
+const pairsMatched = document.getElementById("cards-matched")
 
 let flippedCards = [];
 let matchedCards = 0;
 let cardsDone = []
+let gamesWon = 0;
 
 let noClicky = false;
 
@@ -24,6 +27,7 @@ shuffle(randomItems);
 function createCards() {
 
   matchedCards = 0;
+  pairsMatched.innerHTML = "Pairs matched: 0"
   cardsDone = []
   noClicky = false;
   flippedCards = [];
@@ -63,11 +67,14 @@ function createCards() {
         if (first === second) {
           console.log("Matched!")
           matchedCards += 2;
+          pairsMatched.innerHTML = "Pairs matched: " + (matchedCards / 2).toString();
           cardsDone.push(flippedCards[0].dataset.pokemon);
           flippedCards = []
           noClicky = false;
           if (matchedCards === Number(numberOfCards)) {
             alert("you win! reinput a number to reset!");
+            gamesWon += 1;
+            gameCounter.innerHTML = "Games won: " + gamesWon.toString()
             matchedCards = 0;
           }
         } else {
