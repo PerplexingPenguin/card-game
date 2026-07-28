@@ -10,6 +10,6 @@ Features:
 - art from the Pokémon website
 - fun card backing with original art!
 
-Made w/ HTML and CSS,
+Made w/ HTML, CSS, JS
 for Hackachu: a Hack Club YSWS!
 
