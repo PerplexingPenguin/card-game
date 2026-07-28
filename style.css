@@ -57,6 +57,10 @@ body {
   border: 1px black solid;
 }
 
+.card p img {
+  width: 100%;
+}
+
 .card:hover {
   cursor: pointer;
 }
@@ -100,7 +104,7 @@ body {
 }
 
 .back {
-  background-color: lemonchiffon;
+  background-color: white;
   transform: rotateY(180deg);
 }
 
