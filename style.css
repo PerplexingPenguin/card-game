@@ -52,8 +52,9 @@ body {
   height: 16em;
   position: relative;
   transform-style: preserve-3d;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: 0.25s ease;
+  border: 1px black solid;
 }
 
 .card:hover {
@@ -74,7 +75,7 @@ body {
   backface-visibility: hidden;
   display: flex;
   transition: 0.2s ease-in-out;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .front img {
@@ -95,7 +96,7 @@ body {
 }
 
 .front {
-  background-color: rgb(79, 79, 199);
+  background: linear-gradient(cornflowerblue, cadetblue);
 }
 
 .back {
