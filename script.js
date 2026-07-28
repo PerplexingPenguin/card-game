@@ -21,9 +21,16 @@ function shuffle(array) {
 shuffle(randomItems);
 
 function createCards() {
+
   matchedCards = 0;
   cardsDiv.innerHTML = '';
   const numberOfCards = cardInput.value;
+
+  if (Number(numberOfCards) % 2 != 0 || Number(numberOfCards) > 20) {
+    alert('u either picked too great of a number or picked an odd number! pls pick an even number that is <= 20 :))');
+    return;
+  };
+
   const randomItemsSliced = randomItems.slice(0, numberOfCards / 2);
   randomItemsSliced.forEach((item) => {
     randomItemsSliced.push(item);
