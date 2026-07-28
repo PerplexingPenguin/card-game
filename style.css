@@ -17,6 +17,7 @@
   height: 16em;
   position: relative;
   transform-style: preserve-3d;
+  border-radius: 20px;
 }
 
 .front,
@@ -27,6 +28,14 @@
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
+  display: flex;
+  border-radius: 20px;
+}
+
+.front img {
+  display: block;
+  margin: auto;
+  width: 50%;
 }
 
 .flipped {
