@@ -21,6 +21,7 @@ function shuffle(array) {
 shuffle(randomItems);
 
 function createCards() {
+  matchedCards = 0;
   cardsDiv.innerHTML = '';
   const numberOfCards = cardInput.value;
   const randomItemsSliced = randomItems.slice(0, numberOfCards / 2);
