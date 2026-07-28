@@ -3,30 +3,65 @@
   padding: 0;
 }
 
+.poke-submit {
+  display: flex;
+  gap: 1em;
+}
+
+.poke-submit input {
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+  width: 5em;
+}
+
+strong {
+  font-size: 1.5em;
+}
+
+.poke-submit button {
+  border-radius: 20px;
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 2em;
+}
+
+.poke-submit button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.poke-submit button:active {
+  background-color: lightslategray;
+}
+
 body {
   margin: 1em;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  font-family: 'Courier New', Courier, monospace;
 }
-
-/* .card {
-  position: relative;
-  background: rgb(87, 151, 247);
-  width: 11.25em;
-  height: 16em;
-  margin-top: 10px;
-  border-radius: 20px;
-} */
 
 .card {
   width: 11.25em;
   height: 16em;
   position: relative;
   transform-style: preserve-3d;
-  border-radius: 20px;
+  border-radius: 5px;
   transition: 0.25s ease;
+}
 
+.card:hover {
+  cursor: pointer;
+}
+
+.card:hover>.front {
+  background-color: blue;
 }
 
 .front,
@@ -38,7 +73,8 @@ body {
   width: 100%;
   backface-visibility: hidden;
   display: flex;
-  border-radius: 20px;
+  transition: 0.2s ease-in-out;
+  border-radius: 5px;
 }
 
 .front img {
@@ -51,7 +87,7 @@ body {
   display: block;
   margin: auto;
   width: 50%;
-  color: white;
+  color: dimgray;
 }
 
 .flipped {
@@ -63,7 +99,7 @@ body {
 }
 
 .back {
-  background-color: red;
+  background-color: lemonchiffon;
   transform: rotateY(180deg);
 }
 
