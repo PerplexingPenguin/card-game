@@ -82,8 +82,11 @@ function createCards() {
 
     card.innerHTML = "<div class='front'><img src='sylveonFocus-ezgif.com-crop.gif' width='100'/></div> <div class='back'><p class='poke-identity'></p></div>"
     const para = card.querySelector('.poke-identity')
+    const img = document.createElement("img")
+    img.src = "images/" + randomItemsSliced[i] + ".avif";
     card.dataset.pokemon = randomItemsSliced[i];
     para.innerHTML = randomItemsSliced[i];
+    para.appendChild(img);
     cardsDiv.appendChild(card);
   };
 };
