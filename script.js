@@ -80,7 +80,7 @@ function createCards() {
       }
     });
 
-    card.innerHTML = "<div class='front'><img src='sylveonFocus-ezgif.com-crop.gif' width='100'/></div> <div class='back'><p class='poke-identity'></p></div>"
+    card.innerHTML = "<div class='front'><img src='./images/cardbacking.png' width='100'/></div> <div class='back'><p class='poke-identity'></p></div>"
     const para = card.querySelector('.poke-identity')
     const img = document.createElement("img")
     img.src = "./images/" + randomItemsSliced[i].toLowerCase() + ".avif";
