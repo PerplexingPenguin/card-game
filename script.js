@@ -85,7 +85,6 @@ function createCards() {
     const img = document.createElement("img")
     img.src = "images/" + randomItemsSliced[i] + ".avif";
     card.dataset.pokemon = randomItemsSliced[i];
-    para.innerHTML = randomItemsSliced[i];
     para.appendChild(img);
     cardsDiv.appendChild(card);
   };
