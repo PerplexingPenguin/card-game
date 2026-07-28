@@ -5,6 +5,7 @@ const randomItems = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmele
 
 let flippedCards = [];
 let matchedCards = 0;
+let cardsDone = []
 
 let noClicky = false;
 
@@ -23,6 +24,9 @@ shuffle(randomItems);
 function createCards() {
 
   matchedCards = 0;
+  cardsDone = []
+  noClicky = false;
+  flippedCards = [];
   cardsDiv.innerHTML = '';
   const numberOfCards = cardInput.value;
 
@@ -41,7 +45,7 @@ function createCards() {
     const card = document.createElement("DIV");
     card.classList.add("card");
     card.addEventListener("click", () => {
-      if (flippedCards.includes(card) || noClicky) {
+      if (flippedCards.includes(card) || noClicky || cardsDone.includes(card.dataset.pokemon)) {
         return;
       }
 
@@ -59,6 +63,7 @@ function createCards() {
         if (first === second) {
           console.log("Matched!")
           matchedCards += 2;
+          cardsDone.push(flippedCards[0].dataset.pokemon);
           flippedCards = []
           noClicky = false;
           if (matchedCards === Number(numberOfCards)) {
